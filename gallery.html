@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mihnea">
+    <meta name="description" content="This page contains information about a firm.">
+    <title>Galerie</title>
+
+    <link rel="stylesheet" href="style_gallery.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <a href="index.html">
+            <img src="Resources/logo.png" alt="Logo" class="logo">
+        </a>
+
+        <h1 class="site-title">Gartenarbeit-Heckenschnitt-Entrümpelung</h1>
+    </header>
+<nav class="main-menu">
+    <a href="index.html">Startseite</a>
+    <a href="work.html">Leistungen</a>
+    <a href="gallery.html">Galerie</a>
+    <a href="contact.html">Kontakt</a>
+</nav>
+    <!-- GALERIE -->
+    <div class="gallery">
+        <img src="Resources/gal1.jpeg" alt="">
+        <img src="Resources/gal2.jpeg" alt="">
+        <img src="Resources/gal3.jpeg" alt="">
+        <img src="Resources/gal4.jpeg" alt="">
+        <img src="Resources/gal5.jpeg" alt="">
+        <img src="Resources/gal6.jpeg" alt="">
+        <img src="Resources/gal7.jpeg" alt="">
+        <img src="Resources/gal8.jpeg" alt="">
+        <img src="Resources/gal9.jpeg" alt="">
+        <img src="Resources/gal10.png" alt="">
+        <img src="Resources/gal11.jpeg" alt="">
+        <img src="Resources/gal12.jpeg" alt="">
+        <img src="Resources/gal13.jpeg" alt="">
+        <img src="Resources/gal14.jpeg" alt="">
+        <img src="Resources/gal15.jpeg" alt="">
+        <img src="Resources/gal16.jpeg" alt="">
+        <img src="Resources/gal17.png" alt="">
+    </div>
+
+    <!-- LIGHTBOX (în afara galeriei) -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img">
+        <div class="prev">&#10094;</div>
+        <div class="next">&#10095;</div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        const images = document.querySelectorAll('.gallery img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close');
+        const nextBtn = document.querySelector('.next');
+        const prevBtn = document.querySelector('.prev');
+
+        let currentIndex = 0;
+
+        images.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                currentIndex = index;
+                showImage();
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        function showImage() {
+            lightboxImg.src = images[currentIndex].src;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage();
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+    </script>
+<footer class="footer">
+    <p>© 2025 Zian Rund ums Haus – Alle Rechte vorbehalten.</p>
+</footer>
+</body>
+
+</html>
