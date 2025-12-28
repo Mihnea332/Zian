@@ -43,8 +43,8 @@ header.top-bar {
 header.top-bar img.logo {
     position: absolute;
     left: 20px;
-    top: 0;
-    height: 200px;
+    top: -30px;
+    height: 300px;
     width: auto;
 }
 
