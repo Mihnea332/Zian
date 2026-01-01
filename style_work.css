@@ -48,6 +48,7 @@ h1 {
     font-size: 36px;
     margin-top: 30px;
     margin-bottom: 20px;
+    margin-left: 15px;
 }
 
 /* LISTE CU BIFE VERZI SUS */
@@ -83,7 +84,7 @@ a:hover {
     padding: 15px 0;
     font-size: 18px;
     margin-top: 40px;
-    position: fixed;
+    position: relative;
 }
 /* MENIU NAVIGAȚIE */
 .main-menu {
@@ -110,4 +111,9 @@ a:hover {
 .main-menu a:hover {
     background-color: rgb(48, 235, 48);
     color: black;
+}
+.check {
+    color: rgb(127, 221, 86); /* verdele tău */
+    font-weight: bold;
+    margin-right: 8px;
 }

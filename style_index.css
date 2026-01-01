@@ -89,7 +89,7 @@ p {
     padding: 15px 0;
     font-size: 18px;
     margin-top: 40px;
-    position: fixed;
+    position: relative;
 }
 /* MENIU NAVIGAȚIE */
 .main-menu {
