@@ -83,7 +83,7 @@ a:hover {
     padding: 15px 0;
     font-size: 18px;
     margin-top: 40px;
-    position: relative;
+    position: fixed;
 }
 /* MENIU NAVIGAȚIE */
 .main-menu {
