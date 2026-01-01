@@ -7,7 +7,7 @@ html, body {
 /* BODY – imagine de fundal */
 body {
     font-weight: bold;
-    font-family: cursive;
+    
     font-size: 20px;
 
     background-image: url("Resources/1.jpeg");
