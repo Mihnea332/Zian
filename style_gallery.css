@@ -20,7 +20,8 @@ body {
     background-position: center 100%;
     background-attachment: fixed;
 
-    color: black;
+    color: white;
+    -webkit-text-stroke: 1.5px black;
 }
 
 /* ========================= */

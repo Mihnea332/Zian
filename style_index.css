@@ -15,6 +15,7 @@ body {
 
     text-align: center;
     color: white;
+    -webkit-text-stroke: 1.5px black;
 }
 
 /* HEADER FULL WIDTH */

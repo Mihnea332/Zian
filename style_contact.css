@@ -17,6 +17,7 @@ body {
     background-attachment: fixed;
 
     color: white;
+    -webkit-text-stroke: 1.5px black;
 }
 
 /* CONȚINUT – TOT ÎN AFARĂ DE HEADER */
