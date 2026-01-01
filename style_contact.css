@@ -16,7 +16,7 @@ body {
     background-position: center 100%;
     background-attachment: fixed;
 
-    color: black;
+    color: white;
 }
 
 /* CONȚINUT – TOT ÎN AFARĂ DE HEADER */
@@ -97,7 +97,7 @@ ul
     cursor: pointer;
 }
 a {
-    color: black;
+    color: white;
     text-decoration: none; /* scoate sublinierea */
 }
 

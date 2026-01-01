@@ -14,7 +14,7 @@ body {
     background-attachment: fixed;
 
     text-align: center;
-    color: black;
+    color: white;
 }
 
 /* HEADER FULL WIDTH */
@@ -46,14 +46,14 @@ h1 {
     font-size: 36px;      /* MĂRIT */
     font-weight: 600;
     margin-bottom: 20px;
-    color: black;
+    color: white;
 }
 
 h2 {
     font-size: 28px;      /* MĂRIT */
     font-weight: 600;
     margin-bottom: 20px;
-    color: black;
+    color: white;
 }
 
 /* PARAGRAFE */
