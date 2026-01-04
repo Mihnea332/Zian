@@ -8,19 +8,26 @@ body {
 
 /* BODY – text centrat și negru */
 body {
+  display: flex; /* ACTIVARE FLEXBOX */
+  flex-direction: column; /* Elemente așezate pe verticală */
+  min-height: 100vh; /* Forțează body să fie cât tot ecranul */
+  margin: 0;
+  padding: 0;
+
   font-family: Verdana, sans-serif;
   background-image: url("Resources/1.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 70%;
   background-attachment: fixed;
-  flex-direction: column; /* Așează elementele unul sub altul */
-  min-height: 100vh;
   text-align: center;
   color: white;
   -webkit-text-stroke: 1.5px black;
 }
-
+.content-wrapper {
+  flex: 1; /* Aceasta este linia "magică" care împinge footer-ul jos */
+  width: 100%;
+}
 /* HEADER FULL WIDTH */
 header.top-bar {
   width: 100%;
@@ -92,8 +99,7 @@ p {
   text-align: center;
   padding: 15px 0;
   font-size: 18px;
-  margin-top: 40px;
-  position: relative;
+  margin-top: auto; /* Se asigură că stă la bază */
 }
 /* MENIU NAVIGAȚIE */
 .main-menu {
