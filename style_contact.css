@@ -1,151 +1,154 @@
 /* Elimină marginile implicite */
-html, body {
-    margin: 0;
-    padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 /* BODY – imagine de fundal */
 body {
-    font-weight: bold;
-    font-family: Verdana, sans-serif;;
-    font-size: 20px;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+  font-size: 20px;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url("Resources/1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 100%;
+  background-attachment: fixed;
 
-    background-image: url("Resources/1.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 100%;
-    background-attachment: fixed;
-
-    color: white;
-    -webkit-text-stroke: 1.5px black;
+  color: white;
+  -webkit-text-stroke: 1.5px black;
 }
 
 /* CONȚINUT – TOT ÎN AFARĂ DE HEADER */
 .content {
-    text-align: left;
-    padding-left: -1000px;   /* mută tot conținutul mai în dreapta */
-    max-width: 1500px;
-    margin: 0 auto;
+  flex: 1;
+  text-align: left;
+  padding-left: -1000px; /* mută tot conținutul mai în dreapta */
+  max-width: 1500px;
+  margin: 0 auto;
+  width: 100%;
 }
-
 
 /* HEADER – IDENTIC CU PAGINA PRINCIPALĂ */
 .header-image-container {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .header-image {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* TITLURI */
 h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-top: 30px;
-    margin-left: 15px;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-left: 15px;
 }
 
 h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-top: -20px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: -20px;
 }
 
 /* PARAGRAFE */
 p {
-    font-size: 22px;
-    font-weight: bold;
-    max-width: 900px;
-    margin: 0 0 20px 0;
-    margin-left: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  max-width: 900px;
+  margin: 0 0 20px 0;
+  margin-left: 15px;
 }
 
 /* LISTE FĂRĂ PUNCTE */
 ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin-left: 15px;
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 15px;
 }
 
 /* WHATSAPP */
 .whatsapp-logo {
-    width: 100px;        /* dimensiune mică și elegantă */
-    height: 150px;
-    margin-top: -5px;   /* îl ridică puțin */
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    margin-left: 15px;
+  width: 100px; /* dimensiune mică și elegantă */
+  height: 150px;
+  margin-top: -5px; /* îl ridică puțin */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-left: 15px;
 }
 
 .whatsapp-logo:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
-ul
-{
-    font-size: 22px;
-    font-weight: bold;
+ul {
+  font-size: 22px;
+  font-weight: bold;
 }
 .whatsapp-title {
-    display: flex;            /* pune textul și logo-ul pe aceeași linie */
-    align-items: center;      /* le aliniază vertical perfect */
-    gap: 10px;                /* spațiu între text și logo */
-    margin-left: 15px;
+  display: flex; /* pune textul și logo-ul pe aceeași linie */
+  align-items: center; /* le aliniază vertical perfect */
+  gap: 10px; /* spațiu între text și logo */
+  margin-left: 15px;
 }
 
 .whatsapp-inline {
-    width: 150px;
-    height: 100px;
-    cursor: pointer;
+  width: 150px;
+  height: 100px;
+  cursor: pointer;
 }
 a {
-    color: white;
-    text-decoration: none; /* scoate sublinierea */
+  color: white;
+  text-decoration: none; /* scoate sublinierea */
 }
 
 a:hover {
-    color: black; /* rămâne negru și la hover */
+  color: black; /* rămâne negru și la hover */
 }
 .footer {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    text-align: center;   /* CENTRARE GARANTATĂ */
-    padding: 15px 0;
-    font-size: 18px;
-    margin-top: 40px;
-    position: relative;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center; /* CENTRARE GARANTATĂ */
+  padding: 15px 0;
+  font-size: 18px;
+  margin-top: 40px;
+  position: relative;
 }
 .footer p {
-    margin: 0 auto;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 /* MENIU NAVIGAȚIE */
 .main-menu {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 15px 0;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 .main-menu a {
-    color: white;
-    font-size: 22px;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: 0.3s;
-    background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .main-menu a:hover {
-    background-color: rgb(48, 235, 48);
-    color: black;
+  background-color: rgb(48, 235, 48);
+  color: black;
 }
