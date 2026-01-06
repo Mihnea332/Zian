@@ -18,9 +18,13 @@ body {
   flex-direction: column; /* Așează elementele unul sub altul */
   min-height: 100vh;
   background-image: url("Resources/1.jpeg");
+
   background-size: cover;
+
   background-repeat: no-repeat;
-  background-position: center 100%;
+
+  background-position: center;
+
   background-attachment: fixed;
 
   color: white;

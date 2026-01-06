@@ -18,9 +18,13 @@ body {
   font-family: Verdana, sans-serif;
   font-size: 20px;
   background-image: url("Resources/1.jpeg");
+
   background-size: cover;
+
   background-repeat: no-repeat;
+
   background-position: center;
+
   background-attachment: fixed;
   color: white;
   -webkit-text-stroke: 1.5px black;
