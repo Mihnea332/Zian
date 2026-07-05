@@ -1,95 +1,156 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galerie - Zian</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-overlay"></div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Mihnea">
-    <meta name="description" content="This page contains information about a firm.">
-    <title>Galerie</title>
+    <header class="glass-nav fade-in-down">
+      <a href="index.html" class="logo-container">
+        <img src="Resources/logo.png" alt="Zian Logo" class="nav-logo" />
+      </a>
+      <nav class="main-menu">
+        <a href="index.html">Startseite</a>
+        <a href="work.html">Leistungen</a>
+        <a href="gallery.html" class="active">Galerie</a>
+        <a href="contact.html">Kontakt</a>
+      </nav>
+    </header>
 
-    <link rel="stylesheet" href="style_gallery.css" type="text/css">
-</head>
+    <main class="content-wrapper fade-in-up">
+      <h1>Unsere Arbeit</h1>
+      <div class="gallery-grid">
+        <img
+          class="gallery-item"
+          src="Resources/gal1.jpeg"
+          alt="Gartenarbeit" />
+        <img
+          class="gallery-item"
+          src="Resources/gal2.jpeg"
+          alt="Gartenarbeit" />
+        <img
+          class="gallery-item"
+          src="Resources/gal3.jpeg"
+          alt="Gartenarbeit" />
+        <img
+          class="gallery-item"
+          src="Resources/gal4.jpeg"
+          alt="Gartenarbeit" />
+        <img
+          class="gallery-item"
+          src="Resources/gal5.jpeg"
+          alt="Gartenarbeit" />
+        <img
+          class="gallery-item"
+          src="Resources/gal6.jpeg"
+          alt="Gartenarbeit" />
+        <img
+          class="gallery-item"
+          src="Resources/gal7.jpeg"
+          alt="Gartenarbeit" />
+        <img
+          class="gallery-item"
+          src="Resources/gal8.jpeg"
+          alt="Gartenarbeit" />
+        <img
+          class="gallery-item"
+          src="Resources/gal9.jpeg"
+          alt="Gartenarbeit" />
+        <img
+          class="gallery-item"
+          src="Resources/gal10.png"
+          alt="Gartenarbeit" />
+        <img
+          class="gallery-item"
+          src="Resources/gal11.jpeg"
+          alt="Gartenarbeit" />
+        <img
+          class="gallery-item"
+          src="Resources/gal12.jpeg"
+          alt="Gartenarbeit" />
+        <img
+          class="gallery-item"
+          src="Resources/gal13.jpeg"
+          alt="Gartenarbeit" />
+        <img
+          class="gallery-item"
+          src="Resources/gal14.jpeg"
+          alt="Gartenarbeit" />
+        <img
+          class="gallery-item"
+          src="Resources/gal15.jpeg"
+          alt="Gartenarbeit" />
+        <img
+          class="gallery-item"
+          src="Resources/gal16.jpeg"
+          alt="Gartenarbeit" />
+        <img
+          class="gallery-item"
+          src="Resources/gal17.png"
+          alt="Gartenarbeit" />
+      </div>
+    </main>
 
-<body>
-
-<a href="index.html" class="header-image-container">
-    <img src="Resources/header-image.jpeg" alt="Header" class="header-image">
-</a>
-<nav class="main-menu">
-    <a href="index.html">Startseite</a>
-    <a href="work.html">Leistungen</a>
-    <a href="gallery.html">Galerie</a>
-    <a href="contact.html">Kontakt</a>
-</nav>
-    <!-- GALERIE -->
-    <div class="gallery">
-        <img src="Resources/gal1.jpeg" alt="">
-        <img src="Resources/gal2.jpeg" alt="">
-        <img src="Resources/gal3.jpeg" alt="">
-        <img src="Resources/gal4.jpeg" alt="">
-        <img src="Resources/gal5.jpeg" alt="">
-        <img src="Resources/gal6.jpeg" alt="">
-        <img src="Resources/gal7.jpeg" alt="">
-        <img src="Resources/gal8.jpeg" alt="">
-        <img src="Resources/gal9.jpeg" alt="">
-        <img src="Resources/gal10.png" alt="">
-        <img src="Resources/gal11.jpeg" alt="">
-        <img src="Resources/gal12.jpeg" alt="">
-        <img src="Resources/gal13.jpeg" alt="">
-        <img src="Resources/gal14.jpeg" alt="">
-        <img src="Resources/gal15.jpeg" alt="">
-        <img src="Resources/gal16.jpeg" alt="">
-        <img src="Resources/gal17.png" alt="">
-    </div>
-
-    <!-- LIGHTBOX (în afara galeriei) -->
     <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <img class="lightbox-img" id="lightbox-img">
-        <div class="prev">&#10094;</div>
-        <div class="next">&#10095;</div>
+      <span class="close">&times;</span>
+      <img class="lightbox-img" id="lightbox-img" />
+      <div class="prev">&#10094;</div>
+      <div class="next">&#10095;</div>
     </div>
 
-    <!-- SCRIPT -->
     <script>
-        const images = document.querySelectorAll('.gallery img');
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const closeBtn = document.querySelector('.close');
-        const nextBtn = document.querySelector('.next');
-        const prevBtn = document.querySelector('.prev');
+      const images = document.querySelectorAll(".gallery-item");
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const closeBtn = document.querySelector(".close");
+      const nextBtn = document.querySelector(".next");
+      const prevBtn = document.querySelector(".prev");
 
-        let currentIndex = 0;
+      let currentIndex = 0;
 
-        images.forEach((img, index) => {
-            img.addEventListener('click', () => {
-                currentIndex = index;
-                showImage();
-                lightbox.style.display = 'flex';
-            });
+      images.forEach((img, index) => {
+        img.addEventListener("click", () => {
+          currentIndex = index;
+          showImage();
+          lightbox.style.display = "flex";
         });
+      });
 
-        function showImage() {
-            lightboxImg.src = images[currentIndex].src;
+      function showImage() {
+        lightboxImg.src = images[currentIndex].src;
+      }
+
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage();
+      });
+
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage();
+      });
+
+      closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+      });
+
+      // Închide galeria dacă dai click în afara imaginii
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+          lightbox.style.display = "none";
         }
-
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            showImage();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            showImage();
-        });
-
-        closeBtn.addEventListener('click', () => {
-            lightbox.style.display = 'none';
-        });
+      });
     </script>
-<footer class="footer">
-    <p>© 2025 Zian Rund ums Haus – Alle Rechte vorbehalten.</p>
-</footer>
-</body>
 
+    <footer class="glass-footer">
+      <p>© 2026 Zian Rund ums Haus – Alle Rechte vorbehalten.</p>
+    </footer>
+  </body>
 </html>
